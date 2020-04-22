@@ -47,7 +47,7 @@ void data_to_csv(char filepath[], double *x_list[], double *y_list[], int size){
     ofstream CSV;
     CSV.open(filepath);
     CSV << "Speed: " << BOAT_SPEEDS[0] << ", , ,Speed: " << BOAT_SPEEDS[1] << 
-           ", , ,Speed: " << BOAT_SPEEDS[2] << ", , ," << endl;
+           ", , ,Speed: " << BOAT_SPEEDS[2] << endl;
 
     for (int i = 0; i < size; i++){
         CSV << x_list[0][i] << "," << y_list[0][i] << ", ," <<
