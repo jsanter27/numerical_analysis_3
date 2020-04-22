@@ -46,13 +46,11 @@ void backward_euler(double *x_vals, double *y_vals, int size, double h, double s
 void data_to_csv(char filepath[], double *x_list[], double *y_list[], int size){
     ofstream CSV;
     CSV.open(filepath);
-    CSV << "Speed: " << BOAT_SPEEDS[0] << ", , ,Speed: " << BOAT_SPEEDS[1] << 
-           ", , ,Speed: " << BOAT_SPEEDS[2] << "," << endl;
+    CSV << "," << "Speed: " << BOAT_SPEEDS[0] << ",Speed: " << BOAT_SPEEDS[1] << 
+                 ",Speed: " << BOAT_SPEEDS[2] << endl;
 
     for (int i = 0; i < size; i++){
-        CSV << x_list[0][i] << "," << y_list[0][i] << ", ," <<
-               x_list[1][i] << "," << y_list[1][i] << ", ," <<
-               x_list[2][i] << "," << y_list[2][i] << endl;
+        CSV << x_list[0][i] << "," << y_list[0][i] << "," << y_list[1][i] << "," << y_list[2][i] << endl;
     }
 
     CSV.close();
