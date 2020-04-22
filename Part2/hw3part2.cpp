@@ -63,7 +63,7 @@ int main(){
     double start_time = time(0);
     double prob = buffon_needle(TOSSES, DIAMETER, DISTANCE, LINES);
     double end_time = time(0);
-    printf("The probability of touching a line is %f\n", prob);
+    printf("The probability of touching a line is %f percent\n", prob*100);
     
     double mins_taken = (end_time-start_time)/60.0;
     printf("Time Taken: %.2f minutes\n\n", mins_taken);
